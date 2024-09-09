@@ -1,0 +1,53 @@
+.partners {
+    overflow-x: hidden;
+    width: 130%;
+    min-height: 40vh;
+    padding-block: 150px;
+    @include flex-center;
+
+    @media (max-width: 1050px) {
+        min-height: 20vh;
+    }
+
+    &__inner {
+        position: relative;
+        width: 130%;
+    }
+
+    &__container {
+        width: 100%;
+        padding-block: 30px;
+        padding-block: clamp(0.938rem, 0.75rem + 0.94vw, 1.875rem);
+        overflow-x: hidden;
+        left: -10%;
+        top: 0;
+        position: absolute;
+        transform: rotate(4deg);
+        background-color: var(--color-light);
+        border: 1px solid var(--color-grey);
+
+        &_rotate {
+            transform: rotate(-4deg);
+            z-index: -1;
+        }
+    }
+
+    &__row {
+        width: 100%;
+        @include flex-center;
+        gap: 20px;
+
+
+        span {
+            font-size: 90px;
+            font-size: clamp(1.25rem, 0.375rem + 4.38vw, 5.625rem);
+            line-height: 0.8;
+
+            &::after {
+                content: "-";
+                padding-left: 20px;
+            }
+        }
+    }
+
+}

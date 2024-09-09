@@ -1,0 +1,23 @@
+.footer {
+    padding-block: 20px;
+
+    .logo {
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    &__inner {
+        @include flex-between;
+
+        @media (max-width: 750px) {
+            flex-direction: column;
+            row-gap: 15px;
+        }
+    }
+
+    &__socials-list {
+        @include flex-center;
+        -moz-column-gap: 15px;
+        column-gap: 15px;
+    }
+}

@@ -1,0 +1,123 @@
+html,
+body {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    font-size: 20px;
+    font-family: var(--font-family-base);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+button {
+    @include reset-button;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+.button {
+    @include square(200px);
+    @include flex-center;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    color: var(--color-light);
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+
+    @media (max-width: 750px) {
+        @include square(80px);
+        font-size: 14px;
+    }
+
+    &::after {
+        @include square(220px);
+        content: "";
+        border-radius: 50%;
+        display: block;
+        border: 1px solid var(--color-primary);
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(0, -10px);
+        transition: transform 0.3s ease-in;
+
+        @media (max-width: 750px) {
+            @include square(100px);
+        }
+    }
+
+    &::before {
+        content: 'Click me';
+        @include square(100%);
+        border-radius: 50%;
+        background-color: var(--color-primary-hover);
+        position: absolute;
+        transition: all 0.3s ease-in;
+        @include flex-center;
+        scale: 0;
+    }
+
+    &:hover::after {
+        transform: translate(-10px, -10px);
+    }
+
+    &:hover::before {
+        scale: 1;
+    }
+}
+
+.popup-opened {
+    overflow: hidden;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    -ms-scroll-chaining: none;
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}

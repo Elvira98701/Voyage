@@ -1,0 +1,21 @@
+:root {
+    --color-dark: #141414;
+    --color-light: #F0F0F0;
+    --color-primary: #FE4249;
+    --color-primary-hover: #bd2a2e;
+    --color-grey: rgb(0 0 0 / 0.1);
+
+    --container-width: 1700px;
+    --container-padding-x: 20px;
+
+    --header-height: 50vh;
+    --section-padding-block: clamp(2.5rem, 1.125rem + 6.88vw, 9.375rem);
+
+    --text-description: clamp(1.25rem, 0.75rem + 2.5vw, 3.75rem);
+    --h2-large: clamp(4.375rem, 2.75rem + 8.13vw, 12.5rem);
+    --font-family-base: 'Author', sans-serif;
+
+    @media (max-width: 1050px) {
+        --header-height: 30vh;
+    }
+}

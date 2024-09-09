@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FE4249" />
+    <title>Voyage</title>
+  </head>
+  <body>
+    <div class="preloader"><div class="preloader__spinner"></div></div>
+    <header class="header">
+      <div class="header__inner container">
+        <a class="logo" href="/">Voyage</a>
+        <div class="header__body">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#" data-id="about">About</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#" data-id="work">Work</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#" data-id="contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <p class="header__description">Photo studio</p>
+        </div>
+      </div>
+    </header>
+    <main class="content">
+      <section class="banner">
+        <div class="banner__inner container">
+          <h1 class="visually-hidden">Voyage</h1>
+          <p class="banner__description">
+            We take portrait, fashion and product photos
+          </p>
+          <button class="banner__button button" id="openButton" type="button">
+            View
+          </button>
+          <img
+            class="banner__image"
+            src="./images/girl2.jpg"
+            alt="girl"
+            width="400"
+          />
+        </div>
+        <div class="banner__overlay" inert id="overlay">
+          <button
+            class="banner__close-button button"
+            id="closeButton"
+            type="button"
+          >
+            Close
+          </button>
+          <div class="banner__overlay-body container">
+            <div class="banner__form-container">
+              <form action="" class="banner__form">
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder="Your name"
+                  required
+                /><input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                  placeholder="Your phone"
+                  required
+                /><input
+                  type="email"
+                  name="email"
+                  id="email"
+                  pattern="/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i"
+                  placeholder="Your email"
+                  required
+                /><button type="submit">Send Applivation</button>
+              </form>
+            </div>
+            <div class="banner__overlay-content">
+              <p class="banner__slogun">
+                Fill in the form to contact us or send an email
+              </p>
+              <h2 class="banner__subtitle">Apply</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners">
+        <div class="partners__inner">
+          <div class="partners__container">
+            <div class="partners__row">
+              <span>Luminary</span>
+              <span>Ember</span>
+              <span>Zenith</span>
+              <span>Spectrum</span>
+              <span>Digiverse</span>
+              <span>Innovatech</span>
+            </div>
+          </div>
+          <div class="partners__container partners__container_rotate">
+            <div class="partners__row">
+              <span>CyberForge</span>
+              <span>Bytewave</span>
+              <span>TechNexus</span>
+              <span>Celestial</span>
+              <span>Veridian</span>
+              <span>Emerge</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="about__inner container">
+          <div class="about__top">
+            <h2 class="about__title">( About )</h2>
+            <div class="about__wrapper">
+              <p class="about__description">
+                Voyage is a professional photography studio specializing in
+                portrait, fashion, product, etc. We are dedicated to creating
+                stunning, high-quality images that capture your vision and tell
+                your story.
+              </p>
+              <a class="about__link" href="./works.html">
+                <span class="about__link-text">See our works</span>
+                <span class="about__link-circle"></span>
+              </a>
+            </div>
+          </div>
+          <div class="about__divider"></div>
+        </div>
+      </section>
+
+      <section class="portfolio" id="work">
+        <div class="portfolio__inner container">
+          <h2 class="portfolio__title">Work</h2>
+        </div>
+        <div class="portfolio__container" id="container-1">
+          <div class="portfolio__row">
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/1.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="portfolio__item with-text">
+              <h3 class="portfolio__subtitle">Product</h3>
+            </div>
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/2.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/3.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/4.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="portfolio__container" id="container-2">
+          <div class="portfolio__row">
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/5.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/6.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/7.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="portfolio__item with-text">
+              <h3 class="portfolio__subtitle">Fashion</h3>
+            </div>
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/8.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="portfolio__container" id="container-3">
+          <div class="portfolio__row">
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/9.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="portfolio__item with-text">
+              <h3 class="portfolio__subtitle">2500</h3>
+            </div>
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/10.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/11.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/12.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="portfolio__container" id="container-4">
+          <div class="portfolio__row">
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/13.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/14.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/15.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="portfolio__item with-text">
+              <h3 class="portfolio__subtitle">Portrait</h3>
+            </div>
+            <div class="portfolio__item">
+              <img
+                src="./public/images/portfolio/16.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="services__inner container">
+          <h2 class="services__title">( Services )</h2>
+          <div class="services__cards">
+            <div class="services__card">
+              <h3 class="services__subtitle">Portrait</h3>
+              <ul class="services__list">
+                <li class="services__item">Individual portraits</li>
+                <li class="services__item">Family portraits</li>
+                <li class="services__item">Pet portraits</li>
+                <li class="services__item">Maternity & newborn portraits</li>
+              </ul>
+            </div>
+            <div class="services__card">
+              <h3 class="services__subtitle">Event</h3>
+              <ul class="services__list">
+                <li class="services__item">Weddings</li>
+                <li class="services__item">Birthdays</li>
+                <li class="services__item">Corporate events</li>
+                <li class="services__item">Conferences</li>
+              </ul>
+            </div>
+            <div class="services__card">
+              <h3 class="services__subtitle">Commercial</h3>
+              <ul class="services__list">
+                <li class="services__item">Product photography</li>
+                <li class="services__item">Food photography</li>
+                <li class="services__item">Fashion photography</li>
+                <li class="services__item">Branding photography</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team">
+        <div class="team__inner container">
+          <div class="team__top">
+            <h2 class="team__title">( Team )</h2>
+            <div class="team__wrapper">
+              <p class="team__description">
+                Voyage is more than just a studio - it's a team of passionate
+                and dedicated individuals who are committed to capturing your
+                most beautiful moments.
+              </p>
+              <a class="team__link" href="./works.html">
+                <span class="team__link-text">See our works</span>
+                <span class="team__link-circle"></span>
+              </a>
+            </div>
+          </div>
+          <ul class="team__list">
+            <li class="team__item">
+              <h3 class="team__subtitle">Noah Smith</h3>
+              <p class="team__slogun">Photographer</p>
+              <div class="team__image">
+                <img src="./public/images/team/1.jpg" alt="" loading="lazy" />
+              </div>
+            </li>
+            <li class="team__item">
+              <h3 class="team__subtitle">Anna Miller</h3>
+              <p class="team__slogun">Make-up artist</p>
+              <div class="team__image">
+                <img src="./public/images/team/2.jpg" alt="" loading="lazy" />
+              </div>
+            </li>
+            <li class="team__item">
+              <h3 class="team__subtitle">Tom Taylor</h3>
+              <p class="team__slogun">Photographer</p>
+              <div class="team__image">
+                <img src="./public/images/team/3.jpg" alt="" loading="lazy" />
+              </div>
+            </li>
+            <li class="team__item">
+              <h3 class="team__subtitle">Olivia Jones</h3>
+              <p class="team__slogun">Assistant</p>
+              <div class="team__image">
+                <img src="./public/images/team/4.jpg" alt="" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2 class="contact__title">Get in touch</h2>
+        <div class="contact__inner">
+          <p class="contact__description">
+            Reach out
+            <a class="contact__link" href="mailto:hi@voyage.studio"
+              >hi@voyage.studio</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner container">
+        <a href="#" class="logo">Voyage</a>
+        <small>&#64; 2024, ALL RIGHTS RESERVED</small>
+        <ul class="footer__socials-list">
+          <li class="footer__socials-item">
+            <a href="https://dribbble.com/" target="_blank">
+              <img
+                src="./icons/socials/dribbble-logo-fill.svg"
+                width="25"
+                alt="dribbble"
+              />
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="http://instagram.com/" target="_blank">
+              <img
+                src="./icons/socials/instagram-logo-fill.svg"
+                width="25"
+                alt="instagram"
+              />
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="https://web.telegram.org/" target="_blank">
+              <img
+                src="./icons/socials/telegram-logo-fill.svg"
+                width="25"
+                alt="telegram"
+              />
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="https://www.tiktok.com/" target="_blank">
+              <img
+                src="./icons/socials/tiktok-logo-fill.svg"
+                width="25"
+                alt="tiktok"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

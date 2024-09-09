@@ -1,0 +1,31 @@
+.preloader {
+    @include flex-center;
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-light);
+    z-index: 105;
+
+    &__spinner {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        mask: radial-gradient(circle closest-side at 50% 40%, #0000 94%, #000);
+        -webkit-mask: radial-gradient(circle closest-side at 50% 40%, #0000 94%, #000);
+        transform-origin: 50% 40%;
+        -webkit-animation: s5 1s infinite linear;
+        animation: s5 1s infinite linear;
+    }
+
+    @-webkit-keyframes s5 {
+        100% {
+            transform: rotate(1turn)
+        }
+    }
+
+    @keyframes s5 {
+        100% {
+            transform: rotate(1turn)
+        }
+    }
+}
