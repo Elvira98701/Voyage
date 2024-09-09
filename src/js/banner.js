@@ -6,7 +6,7 @@ import { splitTextIntoSpans } from "./helpers";
 export const initBannerSectionAnimations = () => {
   const tl = gsap.timeline();
   gsap.set(["html.lenis", "html.lenis body"], {
-    height: "100vh",
+    height: "100dvh",
   });
 
   splitTextIntoSpans(".logo");
