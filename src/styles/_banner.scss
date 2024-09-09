@@ -66,6 +66,7 @@
         z-index: 101;
         pointer-events: none;
         opacity: 0;
+        overflow: hidden;
     }
 
     &__overlay-body {
