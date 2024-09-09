@@ -24,10 +24,6 @@
         object-fit: cover;
         z-index: -100;
         will-change: transform;
-
-        @media (max-width: 750px) {
-            height: 500px;
-        }
     }
 
     &__description {
