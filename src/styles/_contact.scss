@@ -35,8 +35,7 @@
         @include flex-center;
         flex-shrink: 0;
         background-color: var(--color-primary);
-        // width: 142cqmax;
-        // height: 142cqmax;
+        will-change: transform;
         width: 250%;
         aspect-ratio: 1;
         border-radius: 50%;
