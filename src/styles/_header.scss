@@ -1,7 +1,9 @@
 .header {
     position: fixed;
+    background-color: transparent;
     width: 100%;
     z-index: 100;
+    will-change: color, background-color;
 
     &__inner {
         @include flex-center;
@@ -14,6 +16,7 @@
         font-weight: 700;
         line-height: 0.8;
         text-transform: uppercase;
+        will-change: font-size;
 
         span {
             display: inline-block;

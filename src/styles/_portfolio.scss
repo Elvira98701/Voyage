@@ -46,6 +46,7 @@
         transform: translateY(-50%);
         display: flex;
         gap: 1em;
+        will-change: transform;
     }
 
     #container-1,

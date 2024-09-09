@@ -36,6 +36,7 @@
         width: 100%;
         @include flex-center;
         gap: 20px;
+        will-change: transform;
 
 
         span {
