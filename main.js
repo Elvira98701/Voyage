@@ -24,15 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   gsap.ticker.lagSmoothing(0);
 
-  if (ScrollTrigger.isTouch != 0) {
-    document.documentElement.style.overflowX = "hidden";
-    document.documentElement.style.overflowY = "visible";
-    document.body.style.overflowX = "hidden";
-    document.body.style.overflowY = "visible";
-  }
-
   scrollAnimation(lenis);
-
   initBannerSectionAnimations();
   initOverlayAnimations();
   initPartnersSectionAnimations();
