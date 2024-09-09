@@ -23,6 +23,7 @@
         -o-object-fit: cover;
         object-fit: cover;
         z-index: -100;
+        will-change: transform;
 
         @media (max-width: 750px) {
             height: 500px;
@@ -54,6 +55,10 @@
     &__button {
         margin-right: 20px;
         margin-block: auto 50px;
+
+        @media (max-width: 750px) {
+            margin-block: auto 100px;
+        }
     }
 
     &__overlay {
