@@ -37,7 +37,7 @@ export const initOverlayAnimations = () => {
     } else {
       tl.play();
       gsap.set(["html.lenis", "html.lenis body"], {
-        height: "100vh",
+        height: "100dvh",
       });
     }
 
