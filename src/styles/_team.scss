@@ -93,11 +93,19 @@
             -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
+
+        &:hover .team__subtitle {
+            transform: translateX(20px);
+        }
+    }
+
+    &__subtitle {
+        transition: transform 0.3s;
     }
 
     &__image {
         position: absolute;
-        width: 250px;
+        width: 200px;
         left: 30%;
         top: 25%;
         transform: translate(-30%, -50%);

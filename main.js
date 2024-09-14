@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   gsap.ticker.lagSmoothing(0);
 
-  scrollAnimation(lenis);
   initBannerSectionAnimations();
+  scrollAnimation(lenis);
   initOverlayAnimations();
   initPartnersSectionAnimations();
   initAboutSectionAnimations();

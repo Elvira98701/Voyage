@@ -51,7 +51,7 @@ export const initBannerSectionAnimations = () => {
     .from(".menu__item, .header__description, .banner__description", {
       opacity: 0,
       y: 100,
-      stagger: 0.3,
+      stagger: 0.2,
     })
     .from(".banner__button", {
       scale: 0,
