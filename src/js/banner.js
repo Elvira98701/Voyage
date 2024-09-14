@@ -3,11 +3,13 @@ import { ScrollTrigger } from "gsap/all";
 import { cursor } from "./cursor";
 import { splitTextIntoSpans } from "./helpers";
 
-export const initBannerSectionAnimations = () => {
+export const initBannerSectionAnimations = (lenis) => {
+  gsap.registerPlugin(ScrollTrigger);
   const tl = gsap.timeline();
   gsap.set(["html.lenis", "html.lenis body"], {
     height: "100dvh",
   });
+  lenis.stop();
 
   splitTextIntoSpans(".logo");
 
@@ -35,6 +37,7 @@ export const initBannerSectionAnimations = () => {
       gsap.set(["html.lenis", "html.lenis body"], {
         height: "auto",
       });
+      lenis.start();
     },
   })
     .from(".banner__image", {
@@ -51,7 +54,7 @@ export const initBannerSectionAnimations = () => {
     .from(".menu__item, .header__description, .banner__description", {
       opacity: 0,
       y: 100,
-      stagger: 0.2,
+      stagger: 0.3,
     })
     .from(".banner__button", {
       scale: 0,

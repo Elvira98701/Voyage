@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { splitTextIntoSpans } from "./helpers";
 
-export const initOverlayAnimations = () => {
+export const initOverlayAnimations = (lenis) => {
   const openButton = document.querySelector("#openButton");
   const closeButton = document.querySelector("#closeButton");
   const overlay = document.querySelector("#overlay");
@@ -34,11 +34,13 @@ export const initOverlayAnimations = () => {
       gsap.set(["html.lenis", "html.lenis body"], {
         height: "auto",
       });
+      lenis.start();
     } else {
       tl.play();
       gsap.set(["html.lenis", "html.lenis body"], {
         height: "100dvh",
       });
+      lenis.stop();
     }
 
     isOpen = !isOpen;
