@@ -1,12 +1,16 @@
 export const scrollAnimation = (lenis) => {
   const menuLinks = document.querySelectorAll(".menu__link");
 
-  menuLinks.forEach((menuLink) => {
-    menuLink.addEventListener("click", (e) => {
-      const target = document.querySelector(`#${e.currentTarget.dataset.id}`);
-      lenis.scrollTo(target, {
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  if (menuLinks) {
+    menuLinks.forEach((menuLink) => {
+      menuLink.addEventListener("click", (e) => {
+        const target = document.querySelector(`#${e.currentTarget.dataset.id}`);
+        lenis.scrollTo(target, {
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
       });
     });
-  });
+  } else {
+    console.warn("Element .menu__link not found. It might have been removed.");
+  }
 };
