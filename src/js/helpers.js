@@ -17,7 +17,7 @@ export const splitTextIntoSpans = (selector) => {
 export const parallaxRows = (gsap, containerSelector, rowSelector) => {
   const containers = document.querySelectorAll(containerSelector);
 
-  if (containers) {
+  if (containers && containers.length > 0) {
     containers.forEach((container, index) => {
       let start = "0%";
       let end = "-10%";

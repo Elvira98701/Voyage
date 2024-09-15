@@ -1,7 +1,7 @@
 export const smoothScrollToSection = (lenis) => {
   const menuLinks = document.querySelectorAll(".menu__link");
 
-  if (menuLinks) {
+  if (menuLinks && menuLinks.length > 0) {
     menuLinks.forEach((menuLink) => {
       menuLink.addEventListener("click", (e) => {
         const selector = `#${e.currentTarget.dataset.id}`;
