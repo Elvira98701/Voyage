@@ -57,12 +57,13 @@
           </button>
           <div class="banner__overlay-body container">
             <div class="banner__form-container">
-              <form action="" class="banner__form">
+              <form class="banner__form">
                 <input
                   type="text"
                   name="firstname"
                   id="firstname"
                   placeholder="Your name"
+                  pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"
                   required
                 /><input
                   type="tel"

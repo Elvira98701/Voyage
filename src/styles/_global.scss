@@ -88,12 +88,14 @@ a {
         scale: 0;
     }
 
-    &:hover::after {
-        transform: translate(-10px, -10px);
-    }
+    @include hover {
+        &::after {
+            transform: translate(-10px, -10px);
+        }
 
-    &:hover::before {
-        scale: 1;
+        &::before {
+            scale: 1;
+        }
     }
 }
 

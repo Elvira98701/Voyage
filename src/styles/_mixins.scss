@@ -20,3 +20,17 @@
     width: $size;
     aspect-ratio: 1;
 }
+
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @media (hover: none) {
+        &:active {
+            @content;
+        }
+    }
+}

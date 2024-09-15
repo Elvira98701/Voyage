@@ -89,13 +89,15 @@
         border-bottom: 1px solid var(--color-grey);
         padding-block: clamp(1.563rem, 1.25rem + 1.56vw, 3.125rem);
 
-        &:hover .team__image {
-            -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-        }
+        @include hover {
+            .team__image {
+                -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            }
 
-        &:hover .team__subtitle {
-            transform: translateX(20px);
+            .team__subtitle {
+                transform: translateX(20px);
+            }
         }
     }
 
@@ -112,10 +114,15 @@
         -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
         clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
         transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        z-index: 2;
 
         img {
             width: 100%;
             height: auto;
+        }
+
+        @media (max-width: 750px) {
+            width: 100px;
         }
     }
 }

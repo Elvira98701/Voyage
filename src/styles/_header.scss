@@ -59,9 +59,10 @@
             transition: all 0.2s;
         }
 
-        &:hover::before {
-            width: 8px;
+        @include hover {
+            &::before {
+                width: 8px;
+            }
         }
-
     }
 }
