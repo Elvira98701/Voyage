@@ -10,7 +10,7 @@ import { initContactSectionAnimations } from "./src/js/contact";
 import { initAboutSectionAnimations } from "./src/js/about";
 import { initPortfolioSectionAnimations } from "./src/js/portfolio";
 import { initServicesSectionAnimations } from "./src/js/services";
-import { scrollAnimation } from "./src/js/scroll";
+import { smoothScrollToSection } from "./src/js/scroll";
 import { initPartnersSectionAnimations } from "./src/js/partners";
 import { initTeamSectionAnimations } from "./src/js/team";
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   gsap.ticker.lagSmoothing(0);
 
-  scrollAnimation(lenis);
+  smoothScrollToSection(lenis);
   initBannerSectionAnimations(lenis);
   initOverlayAnimations(lenis);
   initPartnersSectionAnimations();

@@ -20,4 +20,12 @@
         -moz-column-gap: 15px;
         column-gap: 15px;
     }
+
+    &__socials-item {
+        transition: scale 0.3s;
+
+        @include hover {
+            scale: 1.2;
+        }
+    }
 }
