@@ -25,10 +25,14 @@ export const initOverlayAnimations = (lenis) => {
         ease: "power4",
         duration: 1,
       })
-      .from(".banner__close-button", {
-        scale: 0,
-        opacity: 0,
-      });
+      .from(
+        ".banner__close-button",
+        {
+          scale: 0,
+          opacity: 0,
+        },
+        "<"
+      );
 
     const toggleOverlay = () => {
       if (isOpen) {

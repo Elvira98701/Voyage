@@ -23,6 +23,8 @@
         -o-object-fit: cover;
         object-fit: cover;
         z-index: -100;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         will-change: transform;
     }
 
@@ -53,7 +55,7 @@
         margin-block: auto 50px;
 
         @media (max-width: 750px) {
-            margin-block: auto 100px;
+            margin-block: auto 150px;
         }
     }
 

@@ -6,6 +6,7 @@ import { splitTextIntoSpans } from "./helpers";
 export const initBannerSectionAnimations = (lenis) => {
   gsap.registerPlugin(ScrollTrigger);
   const tl = gsap.timeline();
+
   gsap.set(["html.lenis", "html.lenis body"], {
     height: "100dvh",
   });
@@ -34,6 +35,7 @@ export const initBannerSectionAnimations = (lenis) => {
       gsap.set(".preloader", {
         display: "none",
       });
+
       gsap.set(["html.lenis", "html.lenis body"], {
         height: "auto",
       });
@@ -41,24 +43,30 @@ export const initBannerSectionAnimations = (lenis) => {
     },
   })
     .from(".banner__image", {
-      opacity: 0,
+      clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)",
       duration: 1,
     })
     .from(".logo span", {
       opacity: 0,
-      y: 100,
+      y: -100,
       stagger: 0.3,
       ease: "power4",
       duration: 1,
     })
-    .from(".menu__item, .header__description, .banner__description", {
-      opacity: 0,
-      y: 100,
-      stagger: 0.3,
-    })
+    .from(
+      ".menu__item, .header__description, .banner__description",
+      {
+        opacity: 0,
+        y: 100,
+        stagger: 0.3,
+      },
+      "<"
+    )
     .from(".banner__button", {
       scale: 0,
       opacity: 0,
+      ease: "elastic",
+      duration: 1.2,
       onComplete: () => {
         if (ScrollTrigger.isTouch == 0) {
           cursor();
