@@ -26,10 +26,18 @@
     &__body {
         @include flex-between;
         width: 100%;
+
+        @media (max-width: 750px) {
+            justify-content: center;
+        }
     }
 
     &__description {
         text-transform: capitalize;
+
+        @media (max-width: 750px) {
+            display: none;
+        }
     }
 }
 
