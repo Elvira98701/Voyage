@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { parallaxRows } from "./helpers";
 
 export const initContactSectionAnimations = () => {
   const tl = gsap.timeline({
@@ -22,4 +23,6 @@ export const initContactSectionAnimations = () => {
     .addLabel("bottom")
     .from(".contact__description", { y: 100, opacity: 0 })
     .addLabel("end");
+
+  parallaxRows(gsap, ".contact__container", ".contact__row");
 };

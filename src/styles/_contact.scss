@@ -1,33 +1,45 @@
 .contact {
     @include flex-center;
-    background: var(--color-light) url('../../public/images/contactBg.jpg') top left / 50% no-repeat;
+    background-color: var(--color-light);
     container-type: size;
     overflow: hidden;
     height: 100vh;
     width: 100vw;
     position: relative;
 
-    @media (max-width: 1050px) {
-        background: var(--color-light) url('../../public/images/contactBg.jpg') center / cover no-repeat;
+    &__parallax {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 130%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    &__title {
-        position: absolute;
-        top: 50%;
-        right: 5%;
-        transform: translate(5%, -50%);
-        text-transform: uppercase;
-        max-width: 50%;
-        font-size: var(--h2-large);
-        line-height: 0.7;
-        text-align: center;
-        color: var(--color-primary);
+    &__container {
+        position: relative;
+        width: 200%;
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: max-content;
+    }
 
-        @media (max-width: 1050px) {
-            right: 0;
-            left: 0;
-            transform: translate(0, 50%);
-            max-width: 100%;
+    &__row {
+        width: 100%;
+        @include flex-center;
+        -moz-column-gap: 40px;
+        column-gap: 40px;
+        will-change: transform;
+
+        span {
+            font-weight: 700;
+            line-height: 0.7;
+            text-transform: uppercase;
+            color: var(--color-grey);
+            font-size: 380px;
+            pointer-events: none;
         }
     }
 
