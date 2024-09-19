@@ -1,7 +1,7 @@
 import gsap from "gsap";
 
 export const initContactSectionAnimations = () => {
-  let tl = gsap.timeline({
+  const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".contact",
       pin: true,

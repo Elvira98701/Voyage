@@ -1,9 +1,9 @@
 export const smoothScrollToSection = (lenis) => {
-  const menuLinks = document.querySelectorAll(".menu__link");
+  const anchorLinks = document.querySelectorAll(".anchor-link");
 
-  if (menuLinks && menuLinks.length > 0) {
-    menuLinks.forEach((menuLink) => {
-      menuLink.addEventListener("click", (e) => {
+  if (anchorLinks && anchorLinks.length > 0) {
+    anchorLinks.forEach((anchorLink) => {
+      anchorLink.addEventListener("click", (e) => {
         const selector = `#${e.currentTarget.dataset.id}`;
         const target = document.querySelector(selector);
 
@@ -19,6 +19,6 @@ export const smoothScrollToSection = (lenis) => {
       });
     });
   } else {
-    console.warn("Element .menu__link not found. It might have been removed.");
+    console.warn("Element .anchor-link not found. It might have been removed.");
   }
 };

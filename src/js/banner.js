@@ -14,7 +14,7 @@ export const initBannerSectionAnimations = (lenis) => {
 
   splitTextIntoSpans(".logo");
 
-  if (ScrollTrigger.isTouch == 0) {
+  if (ScrollTrigger.isTouch === 0) {
     gsap.set(".banner__image", {
       xPercent: -50,
       yPercent: -30,
@@ -68,7 +68,7 @@ export const initBannerSectionAnimations = (lenis) => {
       ease: "elastic",
       duration: 1.2,
       onComplete: () => {
-        if (ScrollTrigger.isTouch == 0) {
+        if (ScrollTrigger.isTouch === 0) {
           cursor();
         }
       },
