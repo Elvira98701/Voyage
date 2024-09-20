@@ -19,9 +19,10 @@ export const initContactSectionAnimations = () => {
   });
 
   tl.addLabel("start")
-    .from(".contact__inner", { scale: 0, duration: 2 })
-    .addLabel("bottom")
-    .from(".contact__description", { y: 100, opacity: 0 })
+    .from(".contact__inner", {
+      scale: 0,
+      duration: 2,
+    })
     .addLabel("end");
 
   parallaxRows(gsap, ".contact__container", ".contact__row");

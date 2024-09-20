@@ -105,7 +105,7 @@ export const initBannerSectionAnimations = (lenis) => {
     },
   });
 
-  gsap.to(".banner", {
+  gsap.to(".banner__inner", {
     opacity: 0,
     scrollTrigger: {
       trigger: ".header",
